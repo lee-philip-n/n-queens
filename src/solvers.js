@@ -28,18 +28,21 @@ window.findNRooksSolution = function(n) {
       //randomly toggle another piece
         //rinse and repeat (recursion?)
   
-  // let board = new Board({ 'n': n});
-  // let randomRow = Math.floor(Math.random() * n);
-  // let randomColumn = Math.floor(Math.random() * n);    
-  // for (var i = 0; i < n; i++) {
-  //   board.togglePiece(randomRow, randomColumn);
-  //   let storedRow = randomRow;
-  //   let storedColumn = randomColumn;
+  // let board = new Board({ 'n': 3});
+  // let i = 0;
+  // while (i < 3) {
+  // let randomRow = () => {Math.floor(Math.random() * 3);
+  // let randomColumn = () => Math.floor(Math.random() * 3);
+  // let row = randomRow();
+  // let column = randomColumn();    
+  //   board.togglePiece(row, column);
   //   if (board.hasAnyRookConflicts) {
-  //     board.togglePiece(storedRow, storedColumn);
+  //     board.togglePiece(row, column);
   //     i--;
   //   } 
+  //   i++;
   // }
+
 
   // 'i' for loop to repeat n times
   //create an array
@@ -59,11 +62,13 @@ window.findNRooksSolution = function(n) {
   }
 
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
+
   return solution;
 };
 
 // return the number of nxn chessboards that exist, with n rooks placed such that none of them can attack each other
 window.countNRooksSolutions = function(n) {
+  
   var solutionCount = undefined; //fixme
 
   console.log('Number of solutions for ' + n + ' rooks:', solutionCount);
@@ -72,7 +77,18 @@ window.countNRooksSolutions = function(n) {
 
 // return a matrix (an array of arrays) representing a single nxn chessboard, with n queens placed such that none of them can attack each other
 window.findNQueensSolution = function(n) {
-  var solution = undefined; //fixme
+  var solution = []; //fixme
+  
+  //create new board
+  //select starting point with for loop
+    //togglePiece(rowIndex, columnIndex)
+    //change rowIndex +1 and columnIndex +2 (row version)
+      //if conflict 
+        //coulmnIndex +3
+  // if #ofpiece < n, new starting point 
+  // if answer found, push this.get(0 to n)
+    //push into solution array;
+    
 
   console.log('Single solution for ' + n + ' queens:', JSON.stringify(solution));
   return solution;
